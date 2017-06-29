@@ -1,0 +1,132 @@
+<div id="main-content">
+	<section class="register_content">
+		<div class="container">
+			<div id="register" class="animate_form">
+				<h1>Datos Personales</h1>
+				<form data-ng-submit="vm.funciones.modificarUsuario()"
+					autocomplete="on">
+
+					<div class="imgcontainer">
+
+						<img src="../imagenes/login.png" alt="Avatar" class="avatar">
+					</div>
+					<h3 class="error" data-ng-repeat="mensaje in vm.mensajes">{{mensaje}}</h3>
+					<p>
+						<label for="username">Nombre de Usuario</label> <input
+							id="username" data-ng-model="vm.user.username" name="username"
+							required="required" type="text" />
+					</p>
+					<p>
+						<label for="email">Email</label> <input id="email"
+							data-ng-model="vm.user.email" name="email" required="required"
+							type="text" />
+					</p>
+					<p>
+						<label for="password">Contraseña</label> <input id="password"
+							name="password" data-ng-model="vm.password" required="required"
+							type="password" />
+					</p>
+					<p>
+						<label for="rpassword">Confirmar contraseña</label> <input
+							data-ng-model="vm.Rpassword" name="rpassword" id="rpassword"
+							required="required" type="password" />
+					</p>
+					<p>
+						<label for="localizacion">Localizacion</label> <input
+							data-ng-model="vm.user.localizacion" id="localizacion"
+							name="localizacion" required="required" type="text" />
+					</p>
+					<p>
+						<label for="tipoIntercambio">Tipo de intercambio</label> <select
+							name="tipoIntercambio" data-ng-model="vm.user.comunicacion"
+							id="tipoIntercambio" class="soflow">
+							<option value="Whatsapp" selected="selected">Whatsapp</option>
+							<option value="FACE to FACE">FACE to FACE</option>
+							<option value="Skype">Skype</option>
+						</select>
+					</p>
+
+					<p>
+						<button class="buttonConfirmar" type="submit" value="Sign up">
+							Confirmar Datos</button>
+
+					</p>
+				</form>
+
+			</div>
+
+
+
+			<div id="addLanguage" class="animate_form">
+				<form data-ng-submit="vm.funciones.addIdioma()">
+					<h1 class="white">¿Desea añadir algún idioma?</h1>
+					<p>
+						<label class="white">¿Que idioma estas aprendiendo?</label> <select
+							id="addIdioma" data-ng-model="vm.userLanguageAdd.idl"
+							data-ng-options="language.idl as language.langname for language in vm.languages"
+							name="addIdioma" class="soflow">
+						<option value="" selected="selected">--Selecciona Idioma</option>
+
+							<!--  <select
+							data-ng-model="vm.userLanguageAdd.idl" id="idiomaHablado"
+							name="idiomaHablado" class="soflow">
+							
+							<option data-ng-repeat="language in vm.languages"
+								value="{{language.idl}}">{{language.langname}}</option>-->
+						</select>
+					</p>
+					<p>
+						<label class="white" for="nivelIdioma" data-icon="p">¿Que
+							nivel tienes?</label> <select data-ng-model="vm.userLanguageAdd.level"
+							class="soflow" name="nivelIdioma" id="nivelIdioma">
+							<option value="A1" selected="selected">A1</option>
+							<option value="A2">A2</option>
+							<option value="B1">B1</option>
+							<option value="B2">B2</option>
+							<option value="C1">C1</option>
+							<option value="C2">C2</option>
+							<option value="Native">Native</option>
+
+						</select>
+
+					</p>
+					<p>
+						<button class="buttonConfirmar" type="submit" value="Sign up">
+							Añadir Idioma</button>
+					</p>
+
+				</form>
+				<h1 class="white">Modificar Idioma</h1>
+				<form data-ng-repeat="userLanguage in vm.user.languages"
+					data-ng-submit="vm.funciones.editarIdioma(userLanguage.idl,userLanguage.level)">
+					<label class="white">{{userLanguage.idioma}}</label> <input
+						class="nivel" name="nivelIdioma2" id="nivelIdioma2"
+						required="required" data-ng-model="userLanguage.level" type="text" />
+					<button class="buttonConfirmarModificacionIdioma" type="submit">
+						Modificar</button>
+				</form>
+
+				<form data-ng-submit="vm.funciones.deleteIdioma()">
+					<h1 class="white">¿Deseas eliminar algún idioma?</h1>
+					<select id="deleteIdioma" data-ng-model="vm.userLanguageAdd.idl"
+						data-ng-options="userLanguage.idl as userLanguage.idioma for userLanguage in vm.user.languages"
+						name="deleteIdioma" class="soflow">
+						<option value="" selected="selected">--Selecciona Idioma</option>
+					</select>
+					<button class="delete_button2" type="submit">Eliminar
+						Idioma</button>
+				</form>
+			</div>
+
+
+		</div>
+
+
+	</section>
+	<section class="seccionBaja">
+		<form data-ng-submit="vm.funciones.borrarUsuario()">
+			<button class="delete_button2" type="submit">Darse de baja</button>
+		</form>
+	</section>
+
+</div>

@@ -1,0 +1,104 @@
+<div id="main-content">
+	<section class="contenido_usuarios">
+
+		<div class="lista_usuarios">
+			<div class="usuario">
+				<div class="items-usuario" id="imagen-valoracion">
+					<div class="imgcontainer">
+						<img src="../imagenes/login.png" alt="Avatar" class="avatar">
+					</div>
+					<h1 class="important">{{vm.user.username}}</h1>
+
+				</div>
+
+				<div class="items-usuario" id="informacion">
+
+					<p>
+						<span class="important">Localización: </span>
+						{{vm.user.localizacion}}
+					</p>
+
+					<span class="important">Idiomas: </span>
+
+					<p data-ng-repeat="userLanguage in vm.user_languages">{{userLanguage.idioma}}
+						- {{userLanguage.level}}</p>
+
+
+					<p>
+						<span class="important">Preferencia: </span>{{vm.user.comunicacion}}
+					</p>
+
+				</div>
+
+
+				<div class="items-usuario" id="valoraciones"></div>
+
+			</div>
+		</div>
+	</section>
+
+	<section class="muro_usuario">
+
+		<h3 class="error" data-ng-repeat="mensaje in vm.mensajes">{{mensaje}}</h3>
+		<form data-ng-if="vm.editable==false"
+			data-ng-submit="vm.funciones.addComentario(vm.user.idu)">
+			<textarea data-ng-model="vm.comentario.text" class="comentario"
+				name="comentario" rows="4" cols="50">Escribe aquí...
+					</textarea>
+			<input class="btn_primary" type="submit" value="Dejar comentario">
+
+		</form>
+
+		<form data-ng-if="vm.editable==true"
+			data-ng-submit="vm.funciones.editComentario()">
+			<textarea data-ng-model="vm.comentario.text" class="comentario"
+				name="comentario" rows="4" cols="50">{{vm.comentario.text}}
+					</textarea>
+			<input class="btn_primary" type="submit" value="Editar comentario">
+		</form>
+
+		<div class="container">
+			<div class="comments-container">
+				<h1>Comentarios</h1>
+				<ul id="lista_comentarios" class="lista_comentarios">
+					<li data-ng-repeat="comment in vm.comments | orderBy:'timestamp':asc">
+						<div class="comentarios_primerNivel">
+							<!-- Avatar -->
+							<div class="comment-avatar">
+								<img src="../imagenes/login.png" alt="avatar">
+							</div>
+							<!-- Contenedor del Comentario -->
+							<div class="comment-box">
+								<div class="comment-head">
+									<h6 data-ng-if="vm.user.idu == comment.sender"
+										class="comment-name by-author">{{comment.senderUsername}}</h6>
+									<h6 data-ng-if="vm.user.idu != comment.sender"
+										class="comment-name">{{comment.senderUsername}}</h6>
+
+									<span>{{comment.fecha}}</span>
+									<form data-ng-if="vm.userSession.idu == comment.sender"
+										class="form-Icon"
+										data-ng-submit="vm.funciones.deleteComentario(comment.idc)">
+										<input class="icon-comment" type="image"
+											src="../imagenes/iconDelete.png" alt="Submit">
+									</form>
+
+									<form data-ng-if="vm.userSession.idu == comment.sender"
+										class="form-Icon"
+										data-ng-submit="vm.funciones.activarEditar(comment)">
+										<input class="icon-comment" type="image"
+											src="../imagenes/iconEdit.png" alt="Submit">
+									</form>
+
+								</div>
+								<div class="comment-content">{{comment.text}}</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+
+
+		</div>
+	</section>
+</div>

@@ -1,0 +1,474 @@
+@import url(https://fonts.googleapis.com/css?family=Josefin+Slab);
+
+@media screen and (max-width:680px) {
+	ul.topnav.responsive {
+		position: relative;
+	}
+	ul.topnav.responsive li.icon {
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+	ul.topnav.responsive li {
+		float: none;
+		display: inline;
+	}
+	ul.topnav.responsive li a {
+		display: block;
+		text-align: left;
+	}
+}
+
+@media ( max-width : 1100px) {
+	.main-image-info {
+		width: 80% !important;
+	}
+	.unete {
+		height: 80px !important;
+	}
+	.items-unete h2 {
+		font-size: 15px !important;
+	}
+}
+
+@media ( max-width : 1000px) {
+	.comoUsar-items div {
+		width: 50% !important;
+	}
+}
+
+@media ( max-width : 600px) {
+	.comoUsar-items {
+		flex-direction: column !important;;
+	}
+	.comoUsar-items div {
+		width: 100% !important;
+	}
+	.container {
+		width: 90% !important;
+	}
+	.items-unete h2 {
+		font-size: 12px !important;
+	}
+	.main-image h1 {
+		font-size: 13px;
+	}
+	.items-main-image p {
+		font-size: 12px !important;
+	}
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Helvetica, Arial, sans-serif, "Josefin Slab";
+	color: #666;
+	background: #f2f2f2;
+	font-size: 1em;
+	line-height: 1.5em;
+	padding-top: 60px;
+	/* Relleno superior igual a la altura de la cabecera*/
+}
+
+img {
+	display: inline-flex;
+	max-width: 100%;
+	max-height: 100%;
+	width: 100%;
+}
+
+.container {
+	margin: 0 auto;
+	width: 70%;
+	padding: 0;
+	position: relative;
+	height: auto;
+}
+
+.btn_primary {
+	display: block;
+	font-family: Helvetica, bold;
+	color: #fff;
+	width: 70%;
+	margin: 2% !important;
+	border: none;
+	height: 10%;
+	padding: 1% 2%;
+	cursor: pointer;
+	background-color: #0B76A6;
+	border-color: #2e6da4;
+}
+
+.btn_primary:hover {
+	background: #095D82;
+}
+
+.items-main-image .info-item h1 {
+	margin-top: 0 !important;
+	color: white;
+	font-size: 1.2em;
+}
+
+/***LOGIIIIIIIIIIIIIIIIIIN**/
+.modalDialog {
+	display: none;
+	position: fixed;
+	font-family: Arial, Helvetica, sans-serif;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 99999;
+	opacity: 0;
+	-webkit-transition: opacity 400ms ease-in;
+	-moz-transition: opacity 400ms ease-in;
+	transition: opacity 400ms ease-in;
+}
+
+.modalDialog:target {
+	display: inline-block;
+	opacity: 1;
+}
+
+.modalDialog>div {
+	width: 400px;
+	position: relative;
+	padding: 5px 10px 13px 10px;
+	border-radius: 10px;
+	background: rgba(0, 0, 0, .9);
+	margin: 6% auto;
+}
+
+.cuadroLogin {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: auto;
+}
+
+.cuadroLogin .button {
+	width: 60%;
+}
+
+.close {
+	background: #606061;
+	color: #FFFFFF;
+	line-height: 25px;
+	position: absolute;
+	right: -12px;
+	text-align: center;
+	top: -10px;
+	width: 24px;
+	text-decoration: none;
+	font-weight: bold;
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
+	border-radius: 12px;
+	-moz-box-shadow: 1px 1px 3px #000;
+	-webkit-box-shadow: 1px 1px 3px #000;
+	box-shadow: 1px 1px 3px #000;
+}
+
+.main-image {
+	background-image: url(../imagenes/mainImage2.jpeg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	height: 700px;
+	max-height: 100%;
+	max-width: 100%;
+	height: 100%;
+}
+
+.main-image-info {
+	width: 50%;
+	height: 600px; /*si la bajo me sube el cajetin*/
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-content: center;
+}
+
+.items-main-image {
+	background: rgba(0, 0, 0, .7);
+	height: 350px;
+	flex-direction: column;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.items-main-image p {
+	margin: 0 1.5em 1.5em 1.5em !important;
+	text-align: center;
+	color: #C2BEBE;
+}
+
+.items-main-image h1 {
+	color: white;
+	margin: 0 1.5em 1em 1.5em !important;
+	text-align: center;
+}
+
+/**SECCION UNETE CON BOTON**/
+.unete {
+	width: 100%;
+	background: #333;
+}
+
+.unete .container {
+	width: 80% !important;
+}
+
+.items-unete {
+	height: auto;
+	display: flex;
+	flex-direction: row;
+	align-content: center;
+	justify-content: center;
+}
+
+.items-unete h2 {
+	margin: 2% !important;
+	color: white;
+	text-align: center;
+	font-size: 17px;
+}
+
+.unete .button {
+	background-color: #4CAF50;
+	margin: 2% !important;
+	color: white;
+	width: 20%;
+	border: none;
+	padding: 1% 2%;
+	cursor: pointer;
+}
+
+/*------SECCION PASOS PARA USAR LA PAGINA CORRECTAMENTE--------*/
+.comoUsar {
+	height: auto;
+	max-height: 100%;
+	background: #3B6A9B;
+}
+
+.comoUsar h1 {
+	width: 100%;
+	text-align: center;
+	align-items: center;
+	color: #FCFCFC;
+}
+
+.comoUsar h2 {
+	font-size: 95%;
+	width: 100%;
+	text-align: center;
+	align-items: center;
+	color: #FFFFFF;
+}
+
+.comoUsar h3 {
+	font-size: 100%;
+	width: 100%;
+	text-align: center;
+	align-items: center;
+	color: #FFFFFF;
+}
+
+.comoUsar .container {
+	width: 90% !important;
+	height: auto;
+}
+
+.comoUsar-items {
+	display: flex;
+	flex-wrap: wrap;
+	align-content: center;
+	justify-content: center;
+}
+
+.comoUsar-items div {
+	margin-left: 1%;
+	margin-right: 1%;
+	margin-top: 5%;
+	margin-bottom: 5%;
+	width: 300px;
+	text-align: center;
+}
+
+.comoUsar-items p {
+	color: white;
+	font-size: 90%;
+}
+
+/************SECCION VENTAJAS DE LA PAGINA*************/
+.ventajas-item {
+	height: auto;
+	max-height: 100%;
+}
+
+.ventajas-item h1 {
+	text-align: center;
+	align-items: center;
+	color: #666;
+}
+
+.ventajas-item .container {
+	width: 80% !important;
+}
+
+.ventajas-items div {
+	width: 210px;
+}
+
+.ventajas-items {
+	display: flex;
+	flex-wrap: wrap;
+	align-content: center;
+	justify-content: center;
+	margin-top: 5%;
+	margin-bottom: 5%;
+}
+
+.ventajas-items  p {
+	margin-top: 2%;
+	text-align: center;
+	margin: 2em !important;
+}
+
+.secondary-text {
+	margin: 2em 0 2em 0 !important;
+	font-size: 14px;
+	justify-content: center;
+	width: auto;
+}
+
+.ventajas-items .avatar {
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	/* cambia estos dos valores para definir el tamaÃ±o de tu cÃ­rculo */
+	height: 120px;
+	width: 120px;
+	background-repeat: no-repeat;
+	background-position: 50%;
+	border-radius: 50%;
+	background-size: 100% 100%;
+}
+
+/******************SECCION INFORMACION******************/
+.help {
+	display: flex;
+	flex-direction: row;
+	height: 600px;
+	align-items: center;
+	justify-content: center;
+	background-image: url(../imagenes/infoBackground.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.help .container {
+	width: 80% !important;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.help p {
+	margin: 2% 5% 5% 5%;
+	display: block;
+	text-align: justify;
+	color: white;
+	font-weight: bold;
+}
+
+.help h1 {
+	color: white;
+}
+
+.help .background {
+	display: block;
+	height: auto;
+	width: 100%;
+	background: rgba(0, 0, 0, .4)
+}
+
+.texto-encima-imagen {
+	padding: 2%;
+}
+/************ 
+//------------------------------
+// CONTENIDO
+//------------------------------
+************/
+#main-content {
+	background: white;
+	width: 100%;
+	margin: auto;
+	box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+}
+
+#main-content header, #main-content .content {
+	padding: 40px;
+}
+
+/************
+//-----------------------------
+// PIE PÃ�GINA
+//-----------------------------
+************/
+#main-footer {
+	background: #333;
+	color: white;
+	text-align: center;
+	padding: 20px;
+}
+
+#main-footer p {
+	margin: 0;
+}
+
+#main-footer a {
+	color: white;
+}
+
+/********
+ERROR 404
+*/
+.error404 {
+	background-image: url(../imagenes/mainImage.jpeg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	height: 700px;
+	max-height: 100%;
+	max-width: 100%;
+	height: auto;
+}
+
+.error404 .container {
+	display: flex;
+	justify-content: center;
+	height: 700px;
+}
+
+.error404 h1 {
+	line-height: 110%;
+	color: white;
+	margin-top: 16%;
+	font-size: 50px;
+}
+
+.error404 h4 {
+	line-height: 110%;
+	color: white;
+	margin-top: 25%;
+	font-size: 30px;
+}
+.inputContainer { position:relative; }
+.myInput { padding-left:25px; /* This will move the text from under the image */ } 
+.inputImg { left:5px; position:absolute; top:5px; z-index:5; }

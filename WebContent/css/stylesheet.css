@@ -1,0 +1,1482 @@
+/*
+ * NavegaciÃ³n
+ */
+#main-header {
+	background: #333;
+	color: white;
+	height: 60px;
+	z-index: 1;
+	width: 100%;
+	/* hacemos que la cabecera ocupe el ancho completo de la pÃ¡gina */
+	left: 0; /* Posicionamos la cabecera al lado izquierdo */
+	top: 0; /* Posicionamos la cabecera pegada arriba */
+	position: absolute;
+	/* Hacemos que la cabecera tenga una posiciÃ³n fija */
+}
+
+#main-header a {
+	color: white;
+	text-align: center;
+}
+
+#inicioLink {
+	float: left;
+}
+
+nav {
+	width: 100%;
+	font-size: 95%;
+}
+
+nav ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+nav ul li {
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	flex-direction: column;
+	display: inline-block;
+	line-height: 60px;
+	float: right;
+}
+
+nav ul li a {
+	display: block;
+	padding: 0 10px;
+	text-decoration: none;
+}
+
+nav ul li a:hover {
+	background: #0b76a6;
+}
+
+/* Full-width inputs */
+input[type=text], input[type=password] {
+	width: 100%;
+	padding: 10px 18px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+.button {
+	background-color: #4CAF50;
+	color: white;
+	padding: 2% 2%;
+	border: none;
+	cursor: pointer;
+	width: 50%;
+}
+/* Set a style for all buttons */
+button {
+	color: white;
+	border: none;
+	cursor: pointer;
+}
+
+/* Extra style for the cancel button (red) */
+.cancelbtn {
+	width: auto;
+	padding: 10px 18px;
+	background-color: #f44336;
+}
+
+/* Center the avatar image inside this container */
+.imgcontainer {
+	display: inline-block;
+	text-align: center;
+	margin: 5% 0 3% 0;
+	background-repeat: no-repeat;
+	background-position: 50%;
+	border-radius: 50%;
+	background-size: 100% 100%;
+}
+
+/* Avatar image */
+img.avatar {
+	width: 40%;
+	border-radius: 50%;
+}
+
+/* Add padding to containers */
+.container_ {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 16px;
+}
+
+/* The "Forgot password" text */
+span.psw {
+	float: right;
+	padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+	span.psw {
+		display: block;
+		float: none;
+	}
+	.cancelbtn {
+		width: 100%;
+	}
+}
+
+.container_ label {
+	color: white;
+	margin-top: 0;
+}
+
+.recuerdame {
+	color: white;
+	font-size: 90%;
+}
+
+.active {
+	background: #0B76A6;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Josefin+Slab);
+
+@media screen and (max-width:680px) {
+	ul.topnav.responsive {
+		position: relative;
+	}
+	ul.topnav.responsive li.icon {
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+	ul.topnav.responsive li {
+		float: none;
+		display: inline;
+	}
+	ul.topnav.responsive li a {
+		display: block;
+		text-align: left;
+	}
+}
+
+@media ( max-width : 1100px) {
+	.main-image-info {
+		width: 80% !important;
+	}
+	.unete {
+		height: 80px !important;
+	}
+	.items-unete h2 {
+		font-size: 15px !important;
+	}
+}
+
+@media ( max-width : 1000px) {
+	.comoUsar-items div {
+		width: 50% !important;
+	}
+}
+
+@media ( max-width : 600px) {
+	.comoUsar-items {
+		flex-direction: column !important;;
+	}
+	.comoUsar-items div {
+		width: 100% !important;
+	}
+	.container {
+		width: 90% !important;
+	}
+	.items-unete h2 {
+		font-size: 12px !important;
+	}
+	.main-image h1 {
+		font-size: 13px;
+	}
+	.items-main-image p {
+		font-size: 12px !important;
+	}
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Helvetica, Arial, sans-serif, "Josefin Slab";
+	color: #666;
+	background: #f2f2f2;
+	font-size: 1em;
+	line-height: 1.5em;
+	padding-top: 60px;
+	/* Relleno superior igual a la altura de la cabecera*/
+}
+
+img {
+	display: inline-flex;
+	max-width: 100%;
+	max-height: 100%;
+	width: 100%;
+}
+
+.container {
+	margin: 0 auto;
+	width: 70%;
+	padding: 0;
+	position: relative;
+	height: auto;
+}
+
+.btn_primary {
+	display: block;
+	font-family: Helvetica, bold;
+	color: #fff;
+	width: 70%;
+	margin: 2% !important;
+	border: none;
+	height: 10%;
+	padding: 1% 2%;
+	cursor: pointer;
+	background-color: #0B76A6;
+	border-color: #2e6da4;
+}
+
+.btn_primary:hover {
+	background: #095D82;
+}
+
+.items-main-image .info-item h1 {
+	margin-top: 0 !important;
+	color: white;
+	font-size: 1.2em;
+}
+
+/***LOGIIIIIIIIIIIIIIIIIIN**/
+.modalDialog {
+	display: none;
+	position: fixed;
+	font-family: Arial, Helvetica, sans-serif;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 99999;
+	opacity: 0;
+	-webkit-transition: opacity 400ms ease-in;
+	-moz-transition: opacity 400ms ease-in;
+	transition: opacity 400ms ease-in;
+}
+
+.modalDialog:target {
+	display: inline-block;
+	opacity: 1;
+}
+
+.modalDialog>div {
+	width: 400px;
+	position: relative;
+	padding: 5px 10px 13px 10px;
+	border-radius: 10px;
+	background: rgba(0, 0, 0, .9);
+	margin: 6% auto;
+}
+
+.cuadroLogin {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: auto;
+}
+
+.cuadroLogin .button {
+	width: 60%;
+}
+
+.close {
+	background: #606061;
+	color: #FFFFFF;
+	line-height: 25px;
+	position: absolute;
+	right: -12px;
+	text-align: center;
+	top: -10px;
+	width: 24px;
+	text-decoration: none;
+	font-weight: bold;
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
+	border-radius: 12px;
+	-moz-box-shadow: 1px 1px 3px #000;
+	-webkit-box-shadow: 1px 1px 3px #000;
+	box-shadow: 1px 1px 3px #000;
+}
+
+.main-image {
+	background-image: url(../imagenes/mainImage2.jpeg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	height: 700px;
+	max-height: 100%;
+	max-width: 100%;
+	height: 100%;
+}
+
+.main-image-info {
+	width: 50%;
+	height: 600px; /*si la bajo me sube el cajetin*/
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-content: center;
+}
+
+.items-main-image {
+	background: rgba(0, 0, 0, .7);
+	height: 350px;
+	flex-direction: column;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.items-main-image p {
+	margin: 0 1.5em 1.5em 1.5em !important;
+	text-align: center;
+	color: #C2BEBE;
+}
+
+.items-main-image h1 {
+	color: white;
+	margin: 0 1.5em 1em 1.5em !important;
+	text-align: center;
+}
+
+/**SECCION UNETE CON BOTON**/
+.unete {
+	width: 100%;
+	background: #333;
+}
+
+.unete .container {
+	width: 80% !important;
+}
+
+.items-unete {
+	height: auto;
+	display: flex;
+	flex-direction: row;
+	align-content: center;
+	justify-content: center;
+}
+
+.items-unete h2 {
+	margin: 2% !important;
+	color: white;
+	text-align: center;
+	font-size: 17px;
+}
+
+.unete .button {
+	background-color: #4CAF50;
+	margin: 2% !important;
+	color: white;
+	width: 20%;
+	border: none;
+	padding: 1% 2%;
+	cursor: pointer;
+}
+
+/*------SECCION PASOS PARA USAR LA PAGINA CORRECTAMENTE--------*/
+.comoUsar {
+	height: auto;
+	max-height: 100%;
+	background: #3B6A9B;
+}
+
+.comoUsar h1 {
+	width: 100%;
+	text-align: center;
+	align-items: center;
+	color: #FCFCFC;
+}
+
+.comoUsar h2 {
+	font-size: 95%;
+	width: 100%;
+	text-align: center;
+	align-items: center;
+	color: #FFFFFF;
+}
+
+.comoUsar h3 {
+	font-size: 100%;
+	width: 100%;
+	text-align: center;
+	align-items: center;
+	color: #FFFFFF;
+}
+
+.comoUsar .container {
+	width: 90% !important;
+	height: auto;
+}
+
+.comoUsar-items {
+	display: flex;
+	flex-wrap: wrap;
+	align-content: center;
+	justify-content: center;
+}
+
+.comoUsar-items div {
+	margin-left: 1%;
+	margin-right: 1%;
+	margin-top: 5%;
+	margin-bottom: 5%;
+	width: 300px;
+	text-align: center;
+}
+
+.comoUsar-items p {
+	color: white;
+	font-size: 90%;
+}
+
+/************SECCION VENTAJAS DE LA PAGINA*************/
+.ventajas-item {
+	height: auto;
+	max-height: 100%;
+}
+
+.ventajas-item h1 {
+	text-align: center;
+	align-items: center;
+	color: #666;
+}
+
+.ventajas-item .container {
+	width: 80% !important;
+}
+
+.ventajas-items div {
+	width: 210px;
+}
+
+.ventajas-items {
+	display: flex;
+	flex-wrap: wrap;
+	align-content: center;
+	justify-content: center;
+	margin-top: 5%;
+	margin-bottom: 5%;
+}
+
+.ventajas-items  p {
+	margin-top: 2%;
+	text-align: center;
+	margin: 2em !important;
+}
+
+.secondary-text {
+	margin: 2em 0 2em 0 !important;
+	font-size: 14px;
+	justify-content: center;
+	width: auto;
+}
+
+.ventajas-items .avatar {
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	/* cambia estos dos valores para definir el tamaÃ±o de tu cÃ­rculo */
+	height: 120px;
+	width: 120px;
+	background-repeat: no-repeat;
+	background-position: 50%;
+	border-radius: 50%;
+	background-size: 100% 100%;
+}
+
+/******************SECCION INFORMACION******************/
+.help {
+	display: flex;
+	flex-direction: row;
+	height: 600px;
+	align-items: center;
+	justify-content: center;
+	background-image: url(../imagenes/infoBackground.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.help .container {
+	width: 80% !important;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.help p {
+	margin: 2% 5% 5% 5%;
+	display: block;
+	text-align: justify;
+	color: white;
+	font-weight: bold;
+}
+
+.help h1 {
+	color: white;
+}
+
+.help .background {
+	display: block;
+	height: auto;
+	width: 100%;
+	background: rgba(0, 0, 0, .4)
+}
+
+.texto-encima-imagen {
+	padding: 2%;
+}
+/************ 
+//------------------------------
+// CONTENIDO
+//------------------------------
+************/
+#main-content {
+	background: white;
+	width: 100%;
+	margin: auto;
+	box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+}
+
+#main-content header, #main-content .content {
+	padding: 40px;
+}
+
+/************
+//-----------------------------
+// PIE PÃ�GINA
+//-----------------------------
+************/
+#main-footer {
+	background: #333;
+	color: white;
+	text-align: center;
+	padding: 20px;
+}
+
+#main-footer p {
+	margin: 0;
+}
+
+#main-footer a {
+	color: white;
+}
+
+/********
+ERROR 404
+*/
+.error404 {
+	background-image: url(../imagenes/mainImage.jpeg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	height: 700px;
+	max-height: 100%;
+	max-width: 100%;
+	height: auto;
+}
+
+.error404 .container {
+	display: flex;
+	justify-content: center;
+	height: 700px;
+}
+
+.error404 h1 {
+	line-height: 110%;
+	color: white;
+	margin-top: 16%;
+	font-size: 50px;
+}
+
+.error404 h4 {
+	line-height: 110%;
+	color: white;
+	margin-top: 25%;
+	font-size: 30px;
+}
+
+@media screen and (max-width:800px) {
+	.contenido_usuarios {
+		flex-direction: column !important;
+		align-items: center !important;
+		justify-content: center !important;
+	}
+	.usuario {
+		flex-direction: column !important;
+		align-items: center !important;
+		justify-content: center !important;
+	}
+	.filtro_usuarios {
+		width: 80% !important;
+	}
+	.lista_usuarios {
+		width: 80% !important;
+		height: auto !important;
+	}
+}
+
+@media screen and (max-width:700px) {
+	.busqueda .container {
+		display: flex !important;
+		flex-direction: column !important;
+		align-content: center !important;
+		justify-content: center !important;
+	}
+}
+
+#main-content {
+	background: #EEEAEA;
+}
+
+/*----------CAJONES DE BARA BuSQUEDA----------------*/
+select.soflow, select#soflow-color {
+	-webkit-appearance: button;
+	-webkit-border-radius: 2px;
+	-webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+	-webkit-padding-end: 20px;
+	-webkit-padding-start: 2px;
+	-webkit-user-select: none;
+	background-image: url(../imagenes/flechitaselect.png),
+		-webkit-linear-gradient(#FAFAFA, #F4F4F4 40%, #E5E5E5);
+	background-position: 97% center;
+	background-repeat: no-repeat;
+	border: 1px solid #AAA;
+	color: #555;
+	font-size: inherit;
+	margin: 20px;
+	overflow: hidden;
+	padding: 5px 10px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	width: 200px;
+}
+
+select.soflow-color {
+	color: #fff;
+	background-image: url(imagenes/flechitaselect.png),
+		-webkit-linear-gradient(#779126, #779126 40%, #779126);
+	background-color: #779126;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+	padding-left: 15px;
+}
+
+/*--------------SECCION DE BUSQUEDA---------------*/
+.busqueda {
+	display: flex;
+	justify-content: center;
+	height: auto;
+	background-image: url(../imagenes/backgroundRegister.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	/*	filter: blur(6px);*/
+}
+
+.busqueda p {
+	margin: 0;
+}
+
+.busqueda h1 {
+	color: white;
+	text-align: center;
+	width: 100%;
+}
+
+.busqueda .container {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+}
+
+.busqueda .btn_primary {
+	height: auto;
+	width: 100px;
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0
+		rgba(0, 0, 0, 0.19);
+	border: 1px solid #333;
+}
+
+.separacion {
+	margin: 0;
+	height: 20px;
+	width: 100%;
+	background: #333;
+}
+/*-------------SECCION DE USUARIOS--------------------*/
+.contenido_usuarios {
+	font-size: 90%;
+	height: auto;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+}
+
+.contenido_usuarios .btn_primary {
+	height: 30px;
+}
+
+.filtro_usuarios {
+	font-size: 90%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin: 2%;
+	height: 600px;
+	background: white;
+	width: 20%;
+}
+
+.filtro_usuarios .btn_primary {
+	height: 30px;
+	margin-top: 10% !important;
+}
+
+.lista_usuarios {
+	margin: 2%;
+	padding-left: 0;
+	font-size: 90%;
+	width: 70%;
+	max-height: 100%;
+}
+
+.lista_usuarios .container {
+	width: 100%;
+}
+
+.usuario {
+	margin-bottom: 2%;
+	background: white;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.items-usuario {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.usuario p {
+	margin-top: 0;
+}
+
+.usuario #imagen-valoracion {
+	width: 30%;
+	height: auto;
+	align-items: center;
+	justify-content: center;
+}
+
+.usuario #informacion {
+	width: 70%;
+	height: auto;
+	margin: 2%;
+}
+
+.usuario #botones {
+	margin: 5%;
+}
+
+.usuario .btn_primary {
+	width: 200px;
+}
+
+.important {
+	font-weight: bold;
+}
+
+.filtro_usuarios p {
+	margin: 2%;
+}
+
+.estrellas {
+	/* Espacio entre los inline-block (los hijos, los `a`) 
+	   http://ksesocss.blogspot.com/2012/03/display-inline-block-y-sus-empeno-en.html */
+	font-size: 0;
+	display: inline-block;
+}
+
+.estrellas a {
+	text-decoration: none;
+	display: inline-block;
+	/* Volver a dar tamaÃ±o al texto */
+	font-size: 15px;
+	font-size: 1.2rem;
+	color: #888;
+}
+
+.estrellas:hover a {
+	color: rgb(39, 130, 228);
+}
+/*
+ * El selector de hijo, es necesario para aumentar la especifidad
+ */
+.estrellas>a:hover ~ a {
+	color: #888;
+}
+
+.modalDialog {
+	display: none;
+	position: fixed;
+	font-family: Arial, Helvetica, sans-serif;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 99999;
+	opacity: 0;
+	-webkit-transition: opacity 400ms ease-in;
+	-moz-transition: opacity 400ms ease-in;
+	transition: opacity 400ms ease-in;
+}
+
+.modalDialog:target {
+	display: inline-block;
+	opacity: 1;
+}
+
+.modalDialog>div {
+	width: 400px;
+	position: relative;
+	padding: 5px 10px 13px 10px;
+	border-radius: 10px;
+	background: rgba(0, 0, 0, .9);
+	margin: 6% auto;
+}
+
+.cuadroLogin {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: auto;
+}
+
+.cuadroLogin .button {
+	width: 60%;
+}
+
+.close {
+	background: #606061;
+	color: #FFFFFF;
+	line-height: 25px;
+	position: absolute;
+	right: -12px;
+	text-align: center;
+	top: -10px;
+	width: 24px;
+	text-decoration: none;
+	font-weight: bold;
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
+	border-radius: 12px;
+	-moz-box-shadow: 1px 1px 3px #000;
+	-webkit-box-shadow: 1px 1px 3px #000;
+	box-shadow: 1px 1px 3px #000;
+}
+
+.container_ textarea {
+	width: 98%;
+	font: 13.3333px Arial;
+	font-style: normal;
+	font-variant-ligatures: normal;
+	font-variant-caps: normal;
+	font-variant-numeric: normal;
+	font-weight: normal;
+	font-stretch: normal;
+	font-size: 13.3333px;
+	line-height: normal;
+	font-family: Arial;
+}
+
+.input[type=text] {
+	width: 130px;
+	-webkit-transition: width 0.4s ease-in-out;
+	transition: width 0.4s ease-in-out;
+}
+
+/* When the input field gets focus, change its width to 100% */
+input[type=text]:focus {
+	width: 100%;
+}
+
+.form_centered {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+
+.icon-comment {
+	margin-left: 2%;
+	margin-right: 2%;
+	height: 15px;
+	width: 15px;
+	border: 0;
+}
+
+.form-Icon {
+	width: auto !important;
+	margin: 3% !important;
+	display: block !important;
+	margin: 1% !important;
+}
+
+.muro_usuario {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.muro_usuario form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 90%;
+	height: auto;
+}
+
+.lista_usuarios {
+	width: 100%;
+	height: auto;
+}
+
+#valoraciones {
+	margin: 4%;
+	width: 80px;
+}
+
+.comentario {
+	width: 60%;
+	height: 20%;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 50%;
+}
+
+.muro_usuario .btn_primary {
+	width: 30%;
+}
+/******MURO******/
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+a {
+	color: #03658c;
+	text-decoration: none;
+}
+
+ul {
+	list-style-type: none;
+}
+
+body {
+	background: #dee1e3;
+}
+
+/** ====================
+ * Lista de Comentarios
+ =======================*/
+.comments-container {
+	margin: 30px auto 15px;
+	width: 80%;
+}
+
+.comments-container h1 {
+	font-size: 36px;
+	color: #283035;
+	font-weight: 400;
+}
+
+.comments-container h1 a {
+	font-size: 18px;
+	font-weight: 700;
+}
+
+.lista_comentarios {
+	margin-top: 30px;
+	position: relative;
+}
+
+/**
+ * Lineas / Detalles
+ -----------------------*/
+.lista_comentarios:before {
+	content: '';
+	width: 2px;
+	height: 100%;
+	background: #c7cacb;
+	position: absolute;
+	left: 32px;
+	top: 0;
+}
+
+.lista_comentarios:after {
+	content: '';
+	position: absolute;
+	background: #c7cacb;
+	bottom: 0;
+	left: 27px;
+	width: 7px;
+	height: 7px;
+	border: 3px solid #dee1e3;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+}
+
+.reply-list:before, .reply-list:after {
+	display: none;
+}
+
+.reply-list li:before {
+	content: '';
+	width: 60px;
+	height: 2px;
+	background: #c7cacb;
+	position: absolute;
+	top: 25px;
+	left: -55px;
+}
+
+.lista_comentarios li {
+	margin-bottom: 15px;
+	display: block;
+	position: relative;
+}
+
+.lista_comentarios li:after {
+	content: '';
+	display: block;
+	clear: both;
+	height: 0;
+	width: 0;
+}
+
+.reply-list {
+	padding-left: 88px;
+	clear: both;
+	margin-top: 15px;
+}
+/**
+ * Avatar
+ ---------------------------*/
+.lista_comentarios .comment-avatar {
+	width: 65px;
+	height: 65px;
+	position: relative;
+	z-index: 99;
+	float: left;
+	border: 3px solid #FFF;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+	-moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+	overflow: hidden;
+}
+
+.lista_comentarios .comment-avatar img {
+	width: 100%;
+	height: 100%;
+}
+
+.reply-list .comment-avatar {
+	width: 50px;
+	height: 50px;
+}
+
+.comentarios_primerNivel:after {
+	content: '';
+	width: 0;
+	height: 0;
+	display: block;
+	clear: both;
+}
+/**
+ * Caja del Comentario
+ ---------------------------*/
+.lista_comentarios .comment-box {
+	width: 680px;
+	float: right;
+	position: relative;
+	-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+	-moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+}
+
+.lista_comentarios .comment-box:before, .lista_comentarios .comment-box:after
+	{
+	content: '';
+	height: 0;
+	width: 0;
+	position: absolute;
+	display: block;
+	border-width: 10px 12px 10px 0;
+	border-style: solid;
+	border-color: transparent #FCFCFC;
+	top: 8px;
+	left: -11px;
+}
+
+.lista_comentarios .comment-box:before {
+	border-width: 11px 13px 11px 0;
+	border-color: transparent rgba(0, 0, 0, 0.05);
+	left: -12px;
+}
+
+.reply-list .comment-box {
+	width: 610px;
+}
+
+.comment-box .comment-head {
+	background: #FCFCFC;
+	padding: 10px 12px;
+	display: flex;
+	border-bottom: 1px solid #E5E5E5;
+	overflow: hidden;
+	-webkit-border-radius: 4px 4px 0 0;
+	-moz-border-radius: 4px 4px 0 0;
+	border-radius: 4px 4px 0 0;
+}
+
+.comment-box .comment-head i {
+	float: right;
+	margin-left: 14px;
+	position: relative;
+	top: 2px;
+	color: #A6A6A6;
+	cursor: pointer;
+	-webkit-transition: color 0.3s ease;
+	-o-transition: color 0.3s ease;
+	transition: color 0.3s ease;
+}
+
+.comment-box .comment-head i:hover {
+	color: #03658c;
+}
+
+.comment-box .comment-name {
+	color: #283035;
+	font-size: 95%;
+	float: left;
+	margin-bottom: 0;
+	margin-top: 0;
+	margin-right: 2%;
+}
+
+.comment-box .comment-name a {
+	color: #283035;
+}
+
+.comment-box .comment-head span {
+	float: left;
+	color: #999;
+	font-size: 13px;
+	position: relative;
+	top: 1px;
+}
+
+.comment-box .comment-content {
+	background: #FFF;
+	padding: 12px;
+	font-size: 15px;
+	color: #595959;
+	-webkit-border-radius: 0 0 4px 4px;
+	-moz-border-radius: 0 0 4px 4px;
+	border-radius: 0 0 4px 4px;
+}
+
+.comment-box .comment-head i {
+	float: right;
+	margin-left: 14px;
+	position: relative;
+	top: 2px;
+	color: #A6A6A6;
+	cursor: pointer;
+	-webkit-transition: color 0.3s ease;
+	-o-transition: color 0.3s ease;
+	transition: color 0.3s ease;
+}
+
+.comment-box .comment-head i:hover {
+	color: #03658c;
+}
+
+/** =====================
+ * Responsive
+ ========================*/
+@media only screen and (max-width: 766px) {
+	.comments-container {
+		width: 480px;
+	}
+	.lista_comentarios .comment-box {
+		width: 390px;
+	}
+	.reply-list .comment-box {
+		width: 320px;
+	}
+}
+
+@media screen and (max-width:800px) {
+	.register_content .container {
+		width: 70%;
+		display: flex;
+		flex-direction: column;
+	}
+}
+
+#main-content {
+	background-image: url(..imagenes/backgroundRegister.jpg);
+}
+
+.register_content {
+	/*background-image: url("imagenes/backgroundRegister.jpg");*/
+	width: 100%;
+	height: auto;
+	
+}
+
+.register_content .container {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	padding: 0%;
+	justify-content: center;
+}
+
+.register_content div {
+	padding: 1% 4% 4% 4%;
+}
+
+#subscribe {
+	color: white;
+	position: absolute;
+	top: 0px;
+	width: 88%;
+	padding: 18px 6% 60px 6%;
+	margin: 0 0 35px 0;
+	background: rgb(247, 247, 247);
+	border: 1px solid rgba(147, 184, 189, 0.8);
+	box-shadow: 0pt 2px 5px rgba(105, 108, 109, 0.7), 0px 0px 8px 5px
+		rgba(208, 223, 226, 0.4) inset;
+	border-radius: 5px;
+}
+
+/**** general text styling ****/
+.container h1 {
+	text-align: center;
+}
+
+.editProfile {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-content: center;
+}
+
+#addLanguage .soflow {
+	width: 100% !important;
+}
+
+#wrapper h1 {
+	font-size: 48px;
+	color: rgb(6, 106, 117);
+	padding: 2px 0 10px 0;
+	font-family: 'FranchiseRegular', 'Arial Narrow', Arial, sans-serif;
+	font-weight: bold;
+	text-align: center;
+	padding-bottom: 30px;
+}
+
+/** For the moment only webkit supports the background-clip:text; */
+#wrapper h1 {
+	color: #0B76A6;
+	content: ' ';
+	display: block;
+	width: 100%;
+	height: 2px;
+	margin-top: 10px;
+}
+
+#register p {
+	margin: 0 2% 1.5em 2%;
+}
+
+#register {
+	background: white;
+}
+
+#register .imgcontainer {
+	width: 90%;
+	margin: 0;
+}
+
+/* -------------------- Select Box Styles: bavotasan.com Method (with special adaptations by ericrasch.com) */
+/* -------------------- Source: http://bavotasan.com/2011/style-select-box-using-only-css/ */
+.styled-select {
+	background: url(http://i62.tinypic.com/15xvbd5.png) no-repeat 96% 0;
+	height: 29px;
+	overflow: hidden;
+	width: 240px;
+}
+
+.styled-select select {
+	background: transparent;
+	border: none;
+	font-size: 14px;
+	height: 29px;
+	padding: 5px;
+	/* If you add too much padding here, the options won't show in IE */
+	width: 268px;
+}
+
+.styled-select.slate {
+	background: url(http://i62.tinypic.com/2e3ybe1.jpg) no-repeat right
+		center;
+	height: 34px;
+	width: 240px;
+}
+
+.styled-select.slate select {
+	border: 1px solid #ccc;
+	font-size: 16px;
+	height: 34px;
+	width: 268px;
+}
+
+/* -------------------- Rounded Corners */
+.rounded {
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+}
+
+.semi-square {
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+/* -------------------- Select Box Styles: danielneumann.com Method */
+/* -------------------- Source: http://danielneumann.com/blog/how-to-style-dropdown-with-css-only/ */
+#mainselection select {
+	border: 0;
+	color: #EEE;
+	background: transparent;
+	font-size: 20px;
+	font-weight: bold;
+	padding: 2px 10px;
+	width: 378px;
+	/*
+   *width: 350px;
+   *background: #58B14C;
+   */
+	-webkit-appearance: none;
+}
+
+#mainselection {
+	overflow: hidden;
+	width: 350px;
+	-moz-border-radius: 9px 9px 9px 9px;
+	-webkit-border-radius: 9px 9px 9px 9px;
+	border-radius: 9px 9px 9px 9px;
+	box-shadow: 1px 1px 11px #330033;
+	background: #58B14C url("http://i62.tinypic.com/15xvbd5.png") no-repeat
+		scroll 319px center;
+}
+
+/* -------------------- Select Box Styles: stackoverflow.com Method */
+/* -------------------- Source: http://stackoverflow.com/a/5809186 */
+select.soflow, select#soflow-color {
+	-webkit-appearance: button;
+	-webkit-border-radius: 2px;
+	-webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+	-webkit-padding-end: 20px;
+	-webkit-padding-start: 2px;
+	-webkit-user-select: none;
+	background-image: url(http://i62.tinypic.com/15xvbd5.png),
+		-webkit-linear-gradient(#FAFAFA, #F4F4F4 40%, #E5E5E5);
+	background-position: 97% center;
+	background-repeat: no-repeat;
+	border: 1px solid #AAA;
+	color: #555;
+	font-size: inherit;
+	margin: 1%;
+	overflow: hidden;
+	padding: 5px 10px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	width: 40%;
+}
+
+select#soflow-color {
+	color: #fff;
+	background-image: url(http://i62.tinypic.com/15xvbd5.png),
+		-webkit-linear-gradient(#779126, #779126 40%, #779126);
+	background-color: #779126;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+	padding-left: 15px;
+}
+
+.buttonConfirmar {
+	margin-left: 25%;
+	margin-right: 25%;
+	background-color: #4CAF50;
+	padding: 2%;
+	width: 200px;
+}
+
+.delete_button2 {
+	margin: 5%;
+	margin-left: 25%;
+	margin-right: 25%;
+	background-color: #e74c3c;
+	padding: 2%;
+	width: 200px;
+	margin-left: 25%;
+}
+
+.seccionBaja {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+}

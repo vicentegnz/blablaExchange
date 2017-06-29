@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es" data-ng-app="blablaExchangeRegister">
+<head>
+<title>BlaBlaExchange</title>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="../css/styleIndex.css">
+<link rel="stylesheet" type="text/css" href="../css/styleRegister.css">
+<link rel="stylesheet" type="text/css" href="../css/navbar.css">
+</head>
+<!-- Include the AngularJS library -->
+<script src="../js/angular/angular.js"></script>
+<script src="../js/angular/angular-route.js"></script>
+<script src="../js/angular/angular-css.min.js"></script>
+<!-- Modules -->
+<script src="../js/appRegister.js"></script>
+<body data-ng-controller="usersRegisterCtrl as vm">
+
+	<header id="main-header">
+		<nav>
+			<ul class="topnav" id="myTopnav">
+				<li id="inicioLink"><a href="../LoginServlet">BlaBlaExchange</a></li>
+
+			</ul>
+		</nav>
+	</header>
+
+	<div id="main-content">
+		<section class="register_content">
+			<div class="container">
+				<div id="register" class="animate_form">
+					<form data-ng-submit="vm.funciones.registrarUsuario()">
+						<h1>Datos Personales</h1>
+
+						<div class="imgcontainer">
+							<img src="../imagenes/login.png" alt="Avatar" class="avatar">
+						</div>
+						<h3 class="error" data-ng-repeat="mensaje in vm.mensajes">{{mensaje}}</h3>
+						<p>
+							<label>Nombre de Usuario</label> <input
+								data-ng-model="vm.user.username" required="required" type="text" />
+						</p>
+						<p>
+							<label>Email</label> <input data-ng-model="vm.user.email"
+								required="required" type="text" />
+						</p>
+						<p>
+							<label>Contraseña</label> <input data-ng-model="vm.user.password"
+								required="required" type="password" />
+						</p>
+						<p>
+							<label>Confirmar la contraseña</label> <input
+								data-ng-model="vm.Rpassword" required="required" type="password" />
+						</p>
+						<p>
+							<label>Localizacion</label> <input
+								data-ng-model="vm.user.localizacion" required="required"
+								type="text" />
+						</p>
+						<p>
+							<label>Tipo de intercambio</label> <select
+								data-ng-init="vm.comunicacion = 'Whatsapp'"
+								data-ng-model="vm.comunicacion" class="soflow">
+								<option value="Whatsapp">Whatsapp</option>
+								<option value="Facetoface">Face to Face</option>
+								<option value="Skype">Skype</option>
+							</select>
+						</p>
+						<p>
+							<button class="buttonConfirmar" type="submit" value="Sign up">
+								Confirmar Datos</button>
+						</p>
+					</form>
+
+				</div>
+
+			</div>
+		</section>
+	</div>
+	<!-- / #main-content -->
+
+	<footer id="main-footer">
+		<p>Página web desarrollada por Vicente González para las
+			asignatura de Programación en Internet. &copy; 2017</p>
+	</footer>
+	<!-- / #main-footer -->
+</body>
+</html>

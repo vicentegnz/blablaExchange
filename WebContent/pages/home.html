@@ -1,0 +1,112 @@
+<meta content="text/html; charset=iso-8859-1" http-equiv=Content-Type>
+<section class="busqueda">
+	<div class="container_">
+		<h1>INTERCAMBIO DE IDIOMAS</h1>
+
+		<p>
+			<input data-ng-model="filterNombre" type="text" id="search"
+				name="search" placeholder="Busqueda...">
+		</p>
+
+
+	</div>
+</section>
+<div class="separacion"></div>
+<section class="contenido_usuarios">
+	<div class="filtro_usuarios">
+		<h2>Filtro:</h2>
+
+		<span class="important">¿Donde estás buscando?</span>
+		<p>
+			<select class="soflow" data-ng-model="vm.filterLocalizacion"
+				name="localizacionFiltro" id="localizacionFiltro">
+				<option value="" selected="selected">No aplicar filtro</option>
+				<option data-ng-repeat="localizacion in vm.localizaciones"
+					value="{{localizacion}}">{{localizacion}}</option>
+			</select>
+		</p>
+		<span class="important">¿Por donde quieres comunicarte?</span>
+		<p>
+			<select class="soflow" data-ng-model="vm.filterComunicacion"
+				name="comunicacionFiltro" id="comunicacionFiltro">
+				<option value="" selected="selected">No aplicar filtro</option>
+				<option value="Whatsapp">Whatsapp</option>
+				<option value="Skype">Skype</option>
+				<option value="FACE to FACE">Face to Face</option>
+			</select>
+		</p>
+
+		<form class="formFiltro"
+			data-ng-submit="vm.funciones.obtenerIdiomasFiltrados(filterNivel,filterIDL)">
+			<span class="important">¿Que idioma quieres practicar?</span>
+			<p>
+				<select class="soflow" data-ng-model="filterIDL"
+					name="idiomasFiltro" id="idiomasFiltro">
+					<option value="" selected="selected">No aplicar filtro</option>
+					<option data-ng-repeat="language in vm.languages"
+						value="{{language.idl}}">{{language.langname}}</option>
+				</select>
+			</p>
+
+			<span class="important">¿Deseas filtrar por nivel?</span> <span>No
+				olvides seleccionar antes un idioma </span>
+			<p>
+				<select class="soflow" data-ng-model="filterNivel"
+					name="nivelIdiomasFiltro" id="nivelIdiomasFiltro">
+					<option value="" selected="selected">No aplicar filtro</option>
+					<option value="A1">A1</option>
+					<option value="A2">A2</option>
+					<option value="B1">B1</option>
+					<option value="B2">B2</option>
+					<option value="C1">C1</option>
+					<option value="C2">C2</option>
+					<option value="Native">Native</option>
+
+				</select>
+			</p>
+			<input class="btn_primary" type="submit" value="Filtrar">
+		</form>
+
+
+	</div>
+	<h1>{{vm.error}}</h1>
+	<ul class="lista_usuarios">
+		<li class="usuario"
+			data-ng-repeat="user in vm.usersFiltrados | filter: {username: filterNombre, localizacion: vm.filterLocalizacion,comunicacion: vm.filterComunicacion}"
+			data-ng-if="user.idu != vm.userSession.idu">
+
+
+			<div class="items-usuario" id="imagen-valoracion">
+				<div class="imgcontainer">
+					<img src="../imagenes/login.png" alt="Avatar" class="avatar">
+				</div>
+				<h1 class="important">{{user.username}}</h1>
+			</div>
+
+			<div class="items-usuario" id="informacion">
+				<p>
+					<span class="important">Localizacion: </span>{{user.localizacion}}
+				</p>
+				<p>
+					<span class="important">Idiomas: </span>
+				<div data-ng-repeat="userLanguage in user.languages">
+					<div data-ng-if="user.idu == userLanguage.idu">
+						<p>{{userLanguage.idioma}} - {{userLanguage.level}}</p>
+					</div>
+				</div>
+
+				<p>
+					<span class="important">Preferencia: </span>{{user.comunicacion}}
+				</p>
+			</div>
+
+
+			<div class="items-usuario" id="botones">
+				<a data-ng-href="#/UserProfile/{{user.idu}}"> <input
+					class="btn_primary" type=button value='Ver Perfil'>
+				</a>
+			</div>
+		</li>
+	</ul>
+
+</section>

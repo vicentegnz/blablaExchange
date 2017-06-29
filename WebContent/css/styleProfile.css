@@ -1,0 +1,339 @@
+@media screen and (max-width:800px) {
+	.contenido_usuarios {
+		flex-direction: column !important;
+		align-items: center !important;
+		justify-content: center !important;
+	}
+	.usuario {
+		flex-direction: column !important;
+		align-items: center !important;
+		justify-content: center !important;
+	}
+	.filtro_usuarios {
+		width: 80% !important;
+	}
+	.lista_usuarios {
+		width: 80% !important;
+		height: auto !important;
+	}
+}
+
+@media screen and (max-width:700px) {
+	.busqueda .container {
+		display: flex !important;
+		flex-direction: column !important;
+		align-content: center !important;
+		justify-content: center !important;
+	}
+}
+
+.formFiltro {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+#main-content {
+	background: #EEEAEA;
+}
+
+/*----------CAJONES DE BARA BuSQUEDA----------------*/
+select.soflow, select#soflow-color {
+	-webkit-appearance: button;
+	-webkit-border-radius: 2px;
+	-webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+	-webkit-padding-end: 20px;
+	-webkit-padding-start: 2px;
+	-webkit-user-select: none;
+	background-image: url(../imagenes/flechitaselect.png),
+		-webkit-linear-gradient(#FAFAFA, #F4F4F4 40%, #E5E5E5);
+	background-position: 97% center;
+	background-repeat: no-repeat;
+	border: 1px solid #AAA;
+	color: #555;
+	font-size: inherit;
+	margin: 20px;
+	overflow: hidden;
+	padding: 5px 10px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	width: 200px;
+}
+
+select.soflow-color {
+	color: #fff;
+	background-image: url(imagenes/flechitaselect.png),
+		-webkit-linear-gradient(#779126, #779126 40%, #779126);
+	background-color: #779126;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+	padding-left: 15px;
+}
+
+/*--------------SECCION DE BUSQUEDA---------------*/
+.busqueda {
+	display: flex;
+	justify-content: center;
+	height: auto;
+	background-image: url(../imagenes/backgroundRegister.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	/*	filter: blur(6px);*/
+}
+
+.busqueda p {
+	margin: 0;
+}
+
+.busqueda h1 {
+	color: white;
+	text-align: center;
+	width: 100%;
+}
+
+.busqueda .container {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+}
+
+.busqueda .btn_primary {
+	height: auto;
+	width: 100px;
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0
+		rgba(0, 0, 0, 0.19);
+	border: 1px solid #333;
+}
+
+.separacion {
+	margin: 0;
+	height: 20px;
+	width: 100%;
+	background: #333;
+}
+/*-------------SECCION DE USUARIOS--------------------*/
+.contenido_usuarios {
+	font-size: 90%;
+	height: auto;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+}
+
+.contenido_usuarios .btn_primary {
+	height: 30px;
+}
+
+.filtro_usuarios {
+	font-size: 90%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin: 2%;
+	height: 600px;
+	background: white;
+	width: 20%;
+}
+
+.filtro_usuarios .btn_primary {
+	height: 30px;
+	margin-top: 10% !important;
+}
+
+.lista_usuarios {
+	margin: 2%;
+	padding-left: 0;
+	font-size: 90%;
+	width: 70%;
+	max-height: 100%;
+}
+
+.lista_usuarios .container {
+	width: 100%;
+}
+
+.usuario {
+	margin-bottom: 2%;
+	background: white;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.items-usuario {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.usuario p {
+	margin-top: 0;
+}
+
+.usuario #imagen-valoracion {
+	width: 30%;
+	height: auto;
+	align-items: center;
+	justify-content: center;
+}
+
+.usuario #informacion {
+	width: 70%;
+	height: auto;
+	margin: 2%;
+}
+
+.usuario #botones {
+	margin: 5%;
+}
+
+.usuario .btn_primary {
+	width: 200px;
+}
+
+.important {
+	font-weight: bold;
+}
+
+.filtro_usuarios p {
+	margin: 2%;
+}
+
+.estrellas {
+	/* Espacio entre los inline-block (los hijos, los `a`) 
+	   http://ksesocss.blogspot.com/2012/03/display-inline-block-y-sus-empeno-en.html */
+	font-size: 0;
+	display: inline-block;
+}
+
+.estrellas a {
+	text-decoration: none;
+	display: inline-block;
+	/* Volver a dar tamaño al texto */
+	font-size: 15px;
+	font-size: 1.2rem;
+	color: #888;
+}
+
+.estrellas:hover a {
+	color: rgb(39, 130, 228);
+}
+/*
+ * El selector de hijo, es necesario para aumentar la especifidad
+ */
+.estrellas>a:hover ~ a {
+	color: #888;
+}
+
+.modalDialog {
+	display: none;
+	position: fixed;
+	font-family: Arial, Helvetica, sans-serif;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 99999;
+	opacity: 0;
+	-webkit-transition: opacity 400ms ease-in;
+	-moz-transition: opacity 400ms ease-in;
+	transition: opacity 400ms ease-in;
+}
+
+.modalDialog:target {
+	display: inline-block;
+	opacity: 1;
+}
+
+.modalDialog>div {
+	width: 400px;
+	position: relative;
+	padding: 5px 10px 13px 10px;
+	border-radius: 10px;
+	background: rgba(0, 0, 0, .9);
+	margin: 6% auto;
+}
+
+.cuadroLogin {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: auto;
+}
+
+.cuadroLogin .button {
+	width: 60%;
+}
+
+.close {
+	background: #606061;
+	color: #FFFFFF;
+	line-height: 25px;
+	position: absolute;
+	right: -12px;
+	text-align: center;
+	top: -10px;
+	width: 24px;
+	text-decoration: none;
+	font-weight: bold;
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
+	border-radius: 12px;
+	-moz-box-shadow: 1px 1px 3px #000;
+	-webkit-box-shadow: 1px 1px 3px #000;
+	box-shadow: 1px 1px 3px #000;
+}
+
+.container_ textarea {
+	width: 98%;
+	font: 13.3333px Arial;
+	font-style: normal;
+	font-variant-ligatures: normal;
+	font-variant-caps: normal;
+	font-variant-numeric: normal;
+	font-weight: normal;
+	font-stretch: normal;
+	font-size: 13.3333px;
+	line-height: normal;
+	font-family: Arial;
+}
+
+.input[type=text] {
+	width: 130px;
+	-webkit-transition: width 0.4s ease-in-out;
+	transition: width 0.4s ease-in-out;
+}
+
+/* When the input field gets focus, change its width to 100% */
+input[type=text]:focus {
+	width: 100%;
+}
+
+.form_centered {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+
+.icon-comment {
+	margin-left: 2%;
+	margin-right: 2%;
+	height: 15px;
+	width: 15px;
+	border: 0;
+}
+
+.form-Icon {
+	width: auto !important;
+	margin: 3% !important;
+	display: block !important;
+	margin: 1% !important;
+}
